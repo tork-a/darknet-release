@@ -40,7 +40,8 @@ function(download_weights network_name)
 endfunction()
 
 # download pre-trained weights
-download_weights(yolo)
+file(MAKE_DIRECTORY weights)
+message("DARKNET: Please download weights http://pjreddie.com/media/files/${network_name}.weights") #download_weights(yolo)
 # download_weights(tiny-yolo-voc)
 # download_weights(yolo-voc)
 
