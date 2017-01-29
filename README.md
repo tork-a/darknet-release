@@ -3,6 +3,12 @@
 ## Setup
 Install CUDA from https://developer.nvidia.com/cuda-downloads
 
+Install ROS from http://wiki.ros.org/indigo/Installation/Ubuntu
+
+```
+apt-get install ros-indigo-darknet
+```
+
 ## Example
 ```
 roscd darknet
