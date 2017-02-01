@@ -12,7 +12,11 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <build_depend>nvidia-cuda</build_depend>
+  <build_depend>nvidia-cuda-dev</build_depend>
   <build_depend>libopencv-dev</build_depend>
+
+  <run_depend>nvidia-cuda</run_depend>
+  <run_depend>libopencv-dev</run_depend>
 
   <test_depend>rostest</test_depend>
   <test_depend>rospy</test_depend>
