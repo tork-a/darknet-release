@@ -20,7 +20,8 @@ echo >&2 "$@"
 echo >&2 "Download weights files to $WEIGHTS_DIR"
 echo >&2 ''
 mkdir -p $WEIGHTS_DIR
-cd $WEIGHTS_DIR; [ ! -e yolo.weights ] && wget http://pjreddie.com/media/files/yolo.weights
+cd $WEIGHTS_DIR; [ ! -e yolo.weights ] && wget https://github.com/tork-a/darknet-release/releases/download/debian%2Fros-indigo-darknet_2016.11.27-1_trusty/yolo.weights
+# yolo.weights is originally located at http://pjreddie.com/media/files/yolo.weights
 
 exit 0
 
