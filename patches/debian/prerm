@@ -1,0 +1,25 @@
+#!/bin/sh -e
+
+. /usr/share/debconf/confmodule
+db_version 2.0
+db_capb backup
+
+errmsg()
+{
+    echo >&2 ''
+    echo >&2 "$@"
+    echo >&2 "try 'dpkg-reconfigure debconf' to select a frontend other than noninteractive"
+    echo >&2 ''
+}
+
+DPKG_MAINTSCRIPT_PACKAGE=ros-indigo-darknet
+
+WEIGHTS_DIR=/opt/ros/$(echo $DPKG_MAINTSCRIPT_PACKAGE| sed 's/^ros-\(.*\)-.*$/\1/')/share/darknet/weights/
+echo >&2 ''
+echo >&2 "remove weights files in $WEIGHTS_DIR"
+echo >&2 ''
+rm $WEIGHTS_DIR/yolo.weights
+rmdir $WEIGHTS_DIR || true
+
+exit 0
+
